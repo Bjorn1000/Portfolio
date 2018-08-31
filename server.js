@@ -3,14 +3,27 @@ const path = require('path');
 
 const app = express();
 
-app.get('/api/customers', (req, res) => {
-  const customers = [
-    {id: 1, firstName: 'John', lastName: 'Doe'},
-    {id: 2, firstName: 'Brad', lastName: 'Traversy'},
-    {id: 3, firstName: 'Mary', lastName: 'Swanson'},
+app.get('/api/programs', (req, res) => {
+  const programs = [
+    {
+      id: 1,
+      name: "Log file automation Script",
+      language: "Python",
+      purpose: "Move and parse log files for data analytics",
+      type: "Script",
+      url: "https://github.com/Bjorn1000/ProfileScrape"
+    },
+    {
+      id: 2,
+      name: "Checkers",
+      language: "Javascript vanilla + Jquery",
+      purpose: "Made a browser game of checkers to learn Asynchronous programming",
+      type: "app",
+      url: "https://github.com/Bjorn1000/JSCHECKERS"
+    }
   ];
 
-  res.json(customers);
+  res.json(programs);
 });
 
 //Server static assets if in production
