@@ -10,6 +10,9 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import finished from './components/Finished/Finished';
 
+import { Provider } from 'react-redux';
+import store from './store';
+
 class App extends Component {
   state = {
     sideDrawerOpen: false
@@ -33,20 +36,20 @@ class App extends Component {
     }
     return (
       <Router>
-        <div style={{height: '100%'}}>
-          <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-          <SideDrawer show={this.state.sideDrawerOpen} />
-          {backdrop}
-          <main style={{marginTop: '64px'}}>
-            <Route exact path='/' component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/apps" component={InteractiveApps} />
-            <Route path="/complete" component={finished} />
-
-          </main>
-        
-        </div>
+        <Provider store={store}>
+          <div style={{height: '100%'}}>
+            <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+            <SideDrawer show={this.state.sideDrawerOpen} />
+            {backdrop}
+            <main style={{marginTop: '64px'}}>
+              <Route exact path='/' component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/apps" component={InteractiveApps} />
+              <Route path="/complete" component={finished} />
+            </main>
+          </div>
+        </Provider>
       </Router>
     );
   }

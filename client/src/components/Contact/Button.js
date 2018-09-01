@@ -9,7 +9,9 @@ class Button extends Component {
   static propTypes = {
     email: PropTypes.string.isRequired,
     formValues: PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      firstName: PropTypes.string.isRequired,
+      lastName: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
       message: PropTypes.string.isRequired,
     }).isRequired,
@@ -25,7 +27,21 @@ class Button extends Component {
 
   logFormDataToConsole(event) {
     console.log('Form Values', this.props.formValues);
-
+    
+    (async () => {
+      const rawResponse = await fetch('/api/formdata', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({a: 1, b: 'Textual content'})
+      });
+      const content = await rawResponse.json();
+    
+      console.log(content);
+    })();
+    
     this.setState({ isClicked: true });
 
   }
@@ -36,7 +52,7 @@ class Button extends Component {
         <button
           disabled={this.state.isClicked}
           onClick={this.logFormDataToConsole}
-          class="btn btn-primary"
+          className="btn btn-primary"
         >
           Submit
         </button>

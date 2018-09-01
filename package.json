@@ -21,6 +21,7 @@
     "concurrently": "^3.5.1",
     "express": "^4.16.2",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.4"
+    "popper.js": "^1.14.4",
+    "reactstrap": "^6.4.0"
   }
 }

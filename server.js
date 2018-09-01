@@ -26,6 +26,10 @@ app.get('/api/programs', (req, res) => {
   res.json(programs);
 });
 
+app.post('/api/formdata', (req, res) => {
+  console.log("here");
+});
+
 //Server static assets if in production
 
 if(process.env.NODE_ENV === 'production') {

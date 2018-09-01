@@ -7,7 +7,7 @@ const Home = () => {
             <div className="centered">
                 <div className="myName"><b>Osbjorn Gulbranson</b></div>
                 <div className="header">Full Stack Developer</div>
-                <img className="photo" src={photo}></img>
+                <img className="photo" src={photo} alt="me"></img>
 
             </div>
         </div>
