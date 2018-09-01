@@ -29,7 +29,18 @@ class Button extends Component {
   logFormDataToConsole(event) {
     console.log('Form Values', this.props.formValues);
     
-    
+    var content = this.props.formValues;
+    axios.post('/api/formdata', {
+      content
+      
+    })
+    .then(function (response) {
+      console.log(response);
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
     
     this.setState({ isClicked: true });
 
