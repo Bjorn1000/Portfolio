@@ -34,10 +34,12 @@ app.get('/api/programs', (req, res) => {
   res.json(programs);
 });
 
+app.use('/api/formdata', contacts);
+/*
 app.post('/api/formdata', (req, res) => {
   console.log("here");
 });
-
+*/
 //Server static assets if in production
 
 if(process.env.NODE_ENV === 'production') {
@@ -48,6 +50,8 @@ if(process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
+
+
 
 const port = process.env.PORT || 5000;
 

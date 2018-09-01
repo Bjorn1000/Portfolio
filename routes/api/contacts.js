@@ -1,6 +1,7 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const router = express.Router();
-
+router.use(bodyParser.json());
 
 // Item Model
 const Item = require('../../models/Contact');
@@ -19,7 +20,9 @@ router.get('/', (req, res) => {
 // @access  Public
 router.post('/', (req, res) => {
   console.log("it hits");
+  console.log(req.body);
 
+  
   console.log(req.body.content);
   const newItem = new Item({
     firstName: req.body.content.firstName,
@@ -30,6 +33,7 @@ router.post('/', (req, res) => {
   });
 
   newItem.save().then(item => res.json(item));
+  
 });
 
 // @route   DELETE api/items/:id
