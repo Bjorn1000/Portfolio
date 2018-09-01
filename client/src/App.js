@@ -6,6 +6,7 @@ import { BrowserRouter as Router,Route} from 'react-router-dom';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import About from './components/About/About';
 
 class App extends Component {
   state = {
@@ -36,6 +37,7 @@ class App extends Component {
           {backdrop}
           <main style={{marginTop: '64px'}}>
             <Route exact path='/' component={Home} />
+            <Route path="/about" component={About} />
             <Route path="/apps" component={InteractiveApps} />
 
           </main>
