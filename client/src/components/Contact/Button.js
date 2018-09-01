@@ -1,6 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 
 class Button extends Component {
@@ -28,19 +29,7 @@ class Button extends Component {
   logFormDataToConsole(event) {
     console.log('Form Values', this.props.formValues);
     
-    (async () => {
-      const rawResponse = await fetch('/api/formdata', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({a: 1, b: 'Textual content'})
-      });
-      const content = await rawResponse.json();
     
-      console.log(content);
-    })();
     
     this.setState({ isClicked: true });
 

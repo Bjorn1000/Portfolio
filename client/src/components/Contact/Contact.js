@@ -5,6 +5,7 @@ import Field from './Field';
 import Button from './Button';
 
 
+
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -23,10 +24,6 @@ class Contact extends Component {
   // Value is whatever the user types into the input field.
   updateField(field, value) {
     this.setState({ [field]: value });
-  }
-
-  happening() {
-    alert("hello");
   }
 
   render() {

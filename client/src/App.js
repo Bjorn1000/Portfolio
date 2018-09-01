@@ -10,9 +10,6 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import finished from './components/Finished/Finished';
 
-import { Provider } from 'react-redux';
-import store from './store';
-
 class App extends Component {
   state = {
     sideDrawerOpen: false
@@ -36,7 +33,7 @@ class App extends Component {
     }
     return (
       <Router>
-        <Provider store={store}>
+
           <div style={{height: '100%'}}>
             <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
             <SideDrawer show={this.state.sideDrawerOpen} />
@@ -49,7 +46,7 @@ class App extends Component {
               <Route path="/complete" component={finished} />
             </main>
           </div>
-        </Provider>
+
       </Router>
     );
   }
