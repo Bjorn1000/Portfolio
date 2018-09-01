@@ -2,6 +2,14 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const app = express();
+const contacts = require('./routes/api/contacts');
+
+const db = require('./config/keys').mongoURI;
+
+mongoose
+  .connect(db)
+  .then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err));
 
 app.get('/api/programs', (req, res) => {
   const programs = [
