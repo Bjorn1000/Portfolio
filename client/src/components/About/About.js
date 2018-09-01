@@ -16,10 +16,10 @@ const About = () => {
                 </a>
             </div>
             <div className="col-sm-6" style={{top: "100px"}}>
-                <div class="card bg-light mb-3" style={{width: "30rem", left: "250px"}}>
-                    <div class="card-header">About</div>
-                    <div class="card-body">
-                        <p class="card-text" style={{fontSize: '25px'}}>Hello, I am a full stack web developer with 2 years of exeperience creating websites, apps, automation scripts, and other projects. I graduated from douglas college's computer
+                <div className="card bg-light mb-3" style={{width: "30rem", left: "250px"}}>
+                    <div className="card-header">About</div>
+                    <div className="card-body">
+                        <p className="card-text" style={{fontSize: '25px'}}>Hello, I am a full stack web developer with 2 years of exeperience creating websites, apps, automation scripts, and other projects. I graduated from douglas college's computer
                         studies and information systems program in 2018 and have been busy ever since. The bulk of my experience is working for startups and doing my own freelance projects.
                         If you have any inquiries about my services, please contact me and we can set up a call. Thank you for visiting and best of luck in your business endeavors!</p>
                     </div>
