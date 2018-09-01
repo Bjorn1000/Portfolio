@@ -7,6 +7,8 @@ import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import finished from './components/Finished/Finished';
 
 class App extends Component {
   state = {
@@ -38,7 +40,9 @@ class App extends Component {
           <main style={{marginTop: '64px'}}>
             <Route exact path='/' component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
             <Route path="/apps" component={InteractiveApps} />
+            <Route path="/complete" component={finished} />
 
           </main>
         
