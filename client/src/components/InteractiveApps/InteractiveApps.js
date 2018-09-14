@@ -6,6 +6,9 @@ const override = css`
     display: block;
     margin: 0 auto;
     border-color: red;
+    margin-top: 30px;
+    margin-left: 50px;
+
 `;
 class InteractiveApps extends Component {
     constructor() {
@@ -14,17 +17,17 @@ class InteractiveApps extends Component {
             programs: [],
             loading: true
         };
-        
     }
     
     componentDidMount() {
-        this.loading = true;
+        this.setState({loading: true});
+        
         fetch('/api/programs')
           .then(res => res.json())
           .then(programs => this.setState({programs}, () => 
           console.log('Customers fetched...', programs
         ),
-        this.loading = false
+        this.setState({loading: false})
     ));
       }
    
@@ -43,7 +46,11 @@ class InteractiveApps extends Component {
                 
                 <div className="row">
                 <h2>Programs</h2>
-                    {this.loading ? (<div className='sweet-loading'>
+               
+                {console.log(this.state.loading)}
+
+                
+                    {this.state.loading ? (<div className='sweet-loading'>
                             <ClipLoader
                             className={override}
                             sizeUnit={"px"}
@@ -52,7 +59,6 @@ class InteractiveApps extends Component {
                             loading={this.state.loading}
                             />
                         </div>) : (<div></div>) }
-                    
                     {programCards}
                 </div>
             </div>
