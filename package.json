@@ -25,6 +25,7 @@
     "jquery": "^3.3.1",
     "mongoose": "^5.2.12",
     "popper.js": "^1.14.4",
+    "react-spinners": "^0.4.5",
     "reactstrap": "^6.4.0"
   }
 }
