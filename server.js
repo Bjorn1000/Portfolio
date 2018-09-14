@@ -32,7 +32,7 @@ app.get('/api/programs', (req, res) => {
     {
       id: 2,
       name: "Ownertoken",
-      language: "Soldity + Javascript",
+      language: "Solidity + Javascript",
       purpose: "A crowdfunding project that combines tokens and voting to help startups distribute their value",
       type: "app",
       url: "https://github.com/Bjorn1000/OwnerToken"
