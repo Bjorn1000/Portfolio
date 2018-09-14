@@ -28,18 +28,22 @@ app.get('/api/programs', (req, res) => {
       purpose: "Made a browser game of checkers to learn Asynchronous programming",
       type: "app",
       url: "https://github.com/Bjorn1000/JSCHECKERS"
-    }
+    },
+    {
+      id: 2,
+      name: "Ownertoken",
+      language: "Soldity + Javascript",
+      purpose: "A crowdfunding project that combines tokens and voting to help startups distribute their value",
+      type: "app",
+      url: "https://github.com/Bjorn1000/OwnerToken"
+    },
   ];
 
   res.json(programs);
 });
 
 app.use('/api/formdata', contacts);
-/*
-app.post('/api/formdata', (req, res) => {
-  console.log("here");
-});
-*/
+
 //Server static assets if in production
 
 if(process.env.NODE_ENV === 'production') {

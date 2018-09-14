@@ -18,8 +18,13 @@
 }
 
 .photo {
-    margin-top: 100px;
-    width: 650px;
-    height: 500px;
-    transform: rotate(90deg);
+    margin-top: 20px;
+    width: 450px;
+}
+.myStack {
+    margin-top: 10px;
+    display: block;
+    margin-left: 220px;
+    margin-right: auto;
+    width: 50%;
 }
