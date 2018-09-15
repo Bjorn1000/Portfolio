@@ -37,6 +37,14 @@ app.get('/api/programs', (req, res) => {
       type: "app",
       url: "https://github.com/Bjorn1000/OwnerToken"
     },
+    {
+      id: 3,
+      name: "Chargeaze",
+      language: "Javascript vanilla + Jquery",
+      purpose: "An app that finds the nearest electric car charging station near you in new westminster",
+      type: "app",
+      url: "https://github.com/Drewfow94/Chargeaze"
+    }
   ];
 
   res.json(programs);
